@@ -1,1 +1,3 @@
-# hello-fazal/sadam
+# maven-project
+
+Simple Maven Project
