@@ -10,7 +10,7 @@ pipeline{
        {
          steps 
          {
-                input message: "Configuring ${params.text}. Do you want to proceed?", ok: 'Procced'
+                input message: "Configuring ${params.text}. Do you want to proceed?", ok: 'Proceed'
          }
        }
         stage ('Deploy') {
