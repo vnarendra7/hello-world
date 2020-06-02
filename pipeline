@@ -6,15 +6,15 @@ pipeline{
         password(name: 'password' ,description: 'please eneter QA env password' )
     }
     stages {
-       stage ('Build') {
-         steps {
-              script {
+       stage ('Confirmation') 
+       {
+         steps 
+         {
                 timeout(time: 10, unit: 'MINUTES') {
-                input(id: "Deploy", message: "Deploy ${params.text}?", ok: 'Deploy')
-              }
-            }
+                input message: "Configuring ${params.text}. Do you want to proceed?", ok: 'Procced'
           }
-        }
+       }
+      }
         stage ('Deploy') {
             steps {
                 echo "${params.ENV}"
