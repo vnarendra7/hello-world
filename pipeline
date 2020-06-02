@@ -13,6 +13,7 @@ pipeline{
                 input(id: "Deploy", message: "Deploy ${params.text}?", ok: 'Deploy')
               }
             }
+          }
         }
         stage ('Deploy') {
             steps {
