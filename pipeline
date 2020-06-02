@@ -10,11 +10,9 @@ pipeline{
        {
          steps 
          {
-                timeout(time: 10, unit: 'MINUTES') {
                 input message: "Configuring ${params.text}. Do you want to proceed?", ok: 'Procced'
-          }
+         }
        }
-      }
         stage ('Deploy') {
             steps {
                 echo "${params.ENV}"
