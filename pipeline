@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+    parameters {
+        string(name: 'text', description: 'Please Enter QA text')
+        choice(choices: 'Dev\nPrd', description: 'Please Select QA Env', name: 'ENV' )
+        password(name: 'password' ,description: 'please eneter QA env password' )
+    }
+    stages {
+        stage ('Deploy') {
+            steps {
+                echo "${params.ENV}"
+                echo "${params.password}"
+                echo "${params.text}"
+            }
+        }
+    }
+}
