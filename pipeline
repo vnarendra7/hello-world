@@ -5,7 +5,7 @@ pipeline{
     parameters {
         string(name: 'text', description: 'Please Enter QA text')
         choice(choices: 'Dev\nPrd', description: 'Please Select QA Env', name: 'ENV' )
-        password(name: 'password',deafultValue: 'xxxxxxxxx', description: 'please eneter QA env password' )
+        password(name: 'password',defaultValue: 'xxxxxxxxx', description: 'please eneter QA env password' )
     }
     stages {
        stage ('Confirmation') 
