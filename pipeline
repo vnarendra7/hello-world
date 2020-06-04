@@ -20,6 +20,9 @@ pipeline{
                 echo "${params.ENV}"
                 echo "${params.password}"
                 echo "${params.text}"
+                sh 'hostname'
+                sh 'ls -l'
+                sh 'pwd'
             }
         }
     }
