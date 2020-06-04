@@ -30,9 +30,9 @@ pipeline{
                 if ("${params.ENV}".equalsIgnoreCase("Dev"))
                     {
                         sh '''
-                        echo "${params.ENV}"
-                        echo "${params.password}"
-                        echo "${params.text}"
+                        echo ${ENV}
+                        echo ${password}
+                        echo ${text}
                         hostname
                         ls -l
                         pwd'
