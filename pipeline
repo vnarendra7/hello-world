@@ -35,7 +35,7 @@ pipeline{
                         echo ${text}
                         hostname
                         ls -l
-                        pwd'
+                        pwd
                         ansible --version
                         '''
                     }
