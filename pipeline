@@ -25,6 +25,9 @@ pipeline{
        }
         stage ('Deploy') {
             steps {
+                script{
+                    
+                if ("${prams.ENV}".equalsIgnoreCase("Dev"))
                 echo "${params.ENV}"
                 echo "${params.password}"
                 echo "${params.text}"
@@ -32,6 +35,10 @@ pipeline{
                 sh 'ls -l'
                 sh 'pwd'
                 sh 'ansible --version'
+
+                else if ("${parms.ENV}".equalsIgnoreCase("Prd"))
+                echo "this is prd"
+                }
             }
         }
     }
