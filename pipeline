@@ -16,13 +16,14 @@ pipeline{
          }
        }
        
-       stage ('Cloning Script')
-       {
-            steps 
-            {
-                checkout([$class: 'GitSCM', branches: [[name: '*/qa']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/kaza514/hello-world.git']]])
+        stage ('Cloning Script') {
+            steps {
+                checkout([$class: 'GitSCM', 				
+				branches: [[name: "origin/qa"]], 
+				userRemoteConfigs: [[
+                url: 'https://github.com/kaza514/hello-world.git']]])
             }
-       }
+        }
         stage ('Deploy') {
             steps {
                 script{
