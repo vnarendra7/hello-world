@@ -36,7 +36,7 @@ pipeline{
                         hostname
                         ls -l
                         pwd'
-                        ansible --version'
+                        ansible --version
                         '''
                     }
                 else if ("${params.ENV}".equalsIgnoreCase("Prd"))
