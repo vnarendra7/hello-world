@@ -28,16 +28,23 @@ pipeline{
                 script{
                     
                 if ("${prams.ENV}".equalsIgnoreCase("Dev"))
-                echo "${params.ENV}"
-                echo "${params.password}"
-                echo "${params.text}"
-                sh 'hostname'
-                sh 'ls -l'
-                sh 'pwd'
-                sh 'ansible --version'
-
+                    {
+                        sh '''
+                        echo "${params.ENV}"
+                        echo "${params.password}"
+                        echo "${params.text}"
+                        hostname
+                        ls -l
+                        pwd'
+                        ansible --version'
+                        '''
+                    }
                 else if ("${parms.ENV}".equalsIgnoreCase("Prd"))
-                echo "this is prd"
+                    {
+                        sh '''
+                        echo "this is prd"
+                        '''
+                    }
                 }
             }
         }
