@@ -27,7 +27,7 @@ pipeline{
             steps {
                 script{
                     
-                if ("${prams.ENV}".equalsIgnoreCase("Dev"))
+                if ("${params.ENV}".equalsIgnoreCase("Dev"))
                     {
                         sh '''
                         echo "${params.ENV}"
@@ -39,11 +39,9 @@ pipeline{
                         ansible --version'
                         '''
                     }
-                else if ("${parms.ENV}".equalsIgnoreCase("Prd"))
+                else if ("${params.ENV}".equalsIgnoreCase("Prd"))
                     {
-                        sh '''
                         echo "this is prd"
-                        '''
                     }
                 }
             }
