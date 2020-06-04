@@ -23,6 +23,7 @@ pipeline{
                 sh 'hostname'
                 sh 'ls -l'
                 sh 'pwd'
+                sh 'ansible --version'
             }
         }
     }
