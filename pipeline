@@ -15,6 +15,14 @@ pipeline{
                 input message: "Configuring ${params.text}. Do you want to proceed?", ok: 'Proceed'
          }
        }
+       
+       stage ('Cloning Script')
+       {
+            steps 
+            {
+               git branch: 'qa', url: 'https://github.com/kaza514/hello-world.git'
+            }
+       }
         stage ('Deploy') {
             steps {
                 echo "${params.ENV}"
