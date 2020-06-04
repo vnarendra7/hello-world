@@ -1,6 +1,6 @@
 pipeline{
     agent {
-        label 'Label1'
+        label 'Lable1'
     }
     parameters {
         string(name: 'text', description: 'Please Enter QA text')
