@@ -1,5 +1,5 @@
-<h1> Hello, Welcome to Demo Application Devops Batch 5 </h1>
+<h1> Hello, Welcome to Demo Application  </h1>
 
-<h2> Good Morning </h2>
+<h2> Good Afternoon </h2>
 
 <h3>  Demoooooooooooooo </h3>
